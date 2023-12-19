@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Admin Home Page";
+}
+
+<div class="mt-4 p-5  text-center ">
+    <h2 style="color:black;font-family:fantasy" class="display-4">Welcome to MVCShoesStore  Administration area! </h2>
+    <p style="font-size:20px;font-weight:bold;color:#0008" class="lead mb-1 mt-3">
+        You can <b>view</b>, <b>add</b>,
+        <b>delete</b> and <b>edit</b> orders, products, stocks, sizes, brands and categories.
+        <br />
+    </p>
+    <p style="color:#0009; font-weight:boldl" class="lead mt-1">
+        You can also see <b>all users and give them roles</b>.
+    </p>
+    <h3 style="color:black">Manage your:</h3>
+    <hr class="my-4">
+    <div class="row justify-content-center">
+        <a asp-area="Admin" asp-controller="Order" asp-action="ManageOrders"
+           class="btn btn-lg">Orders</a>
+        <a asp-area="Admin" asp-controller="Product" asp-action="ManageAll"
+           class="btn btn-lg">Products</a>
+        <a asp-area="Admin" asp-controller="Stock" asp-action="ManageStocks"
+           class="btn btn-lg">Stocks</a>
+        <a asp-area="Admin" asp-controller="Size" asp-action="ManageAll"
+           class="btn btn-lg">Sizes</a>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <a asp-area="Admin" asp-controller="Brand" asp-action="ManageAll"
+           class="btn btn-lg">Brands</a>
+        <a asp-area="Admin" asp-controller="Category" asp-action="ManageAll"
+           class="btn btn-lg">Categories</a>
+        <a asp-area="Admin" asp-controller="User" asp-action="ManageUsers"
+           class="btn btn-lg">Users</a>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

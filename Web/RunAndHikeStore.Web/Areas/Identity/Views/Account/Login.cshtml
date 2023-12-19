@@ -1,0 +1,33 @@
+﻿@model LoginViewModel
+
+
+<div class="row h-75 justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form id="loginForm" method="post" style="margin-top:100px;margin-bottom:120px">
+            <h2 style="margin-bottom:20px;color:black; font-size:50px" class="text-center">@ViewData["Title"]</h2>
+            <hr />
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div style="color:black" class="form-floating">
+                <label asp-for="Email"></label>
+                <input  asp-for="Email" class="form-control" placeholder="Email.." autocomplete="username" aria-required="true" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div style="color:black" class="form-floating">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" placeholder="Password.." class="form-control" autocomplete="new-password" aria-required="true" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button style="background-color:black" id="loginSubmit" type="submit" class="w-100 btn btn-lg btn-primary mt-4 mb-2">Continue</button>
+            <div>
+                <p></p>
+                <a style="color:black" asp-action ="Register" method="get" asp-controller="Account">Don't have a profile?</a>
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
