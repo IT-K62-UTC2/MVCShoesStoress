@@ -106,10 +106,10 @@ a.nav-link-header{
 }
 a.nav-link:hover{
     color:black;
-    background-color:;
+    background-color: black;
 }
 a.nav-link {
-    color: #0008;
+    color: #ffd800;
 }
 a.nav-link dropdown-toggle:hover {
         color: black;
