@@ -51,6 +51,8 @@ namespace RunAndHikeStore.Web.Areas.Identity.Controllers
                 LastName = model.LastName,
                 EmailConfirmed = true,
                 UserName = model.Email,
+                Password = model.Password,
+                
             };
 
             var result = await userManager.CreateAsync(user, model.Password);
